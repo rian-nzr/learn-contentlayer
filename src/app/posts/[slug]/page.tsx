@@ -1,3 +1,5 @@
+// import '../../prism.css'
+
 import Mdx from '@/components/mdx-components';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';

@@ -1,3 +1,6 @@
+import './prism.css'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { getMDXComponent, useMDXComponent } from 'next-contentlayer2/hooks';
 
 const components = {
@@ -22,8 +25,8 @@ interface MdxProps {
 export default function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
   return (
-    <div>
-      <Component components={components} />
+    <div className='prose max-w-none pb-8 pt-10 dark:prose-invert'>
+      <Component  />
     </div>
   );
 }
