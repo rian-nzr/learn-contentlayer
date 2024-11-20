@@ -17,6 +17,10 @@ import rehypeKatex from 'rehype-katex'
 // import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
+import rehypeCitation from "rehype-citation";
+import path from "path";
+
+const root = process.cwd()
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -57,10 +61,11 @@ export default makeSource({
           headingProperties: {
             className: ["content-header"],
           },
+      
         },
       ],
       rehypeKatex,
-      // [rehypeCitation, { path: path.join(root, "data") }],
+      [rehypeCitation, { path: path.join(root, "data") }],
       [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
       rehypePresetMinify,
     ],
