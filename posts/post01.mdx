@@ -2,6 +2,8 @@
 title: Sample .md file
 date: '2016-03-08'
 summary: Example of a markdown file with code blocks and syntax highlighting
+category: javascript
+section: Javascript Dasar
 ---
 
 A sample post with markdown.
@@ -14,9 +16,10 @@ Sample of inline highlighting `sum = parseInt(num1) + parseInt(num2)`
 
 Some Javascript code
 
-```javascript
-var num1, num2, sum
-num1 = prompt('Enter first number')
+```diff-js
+-var num1, num2, sum
+
++num1 = prompt('Enter first number')
 num2 = prompt('Enter second number')
 sum = parseInt(num1) + parseInt(num2) // "+" means "add"
 alert('Sum = ' + sum) // "+" means combine into a string
@@ -24,7 +27,7 @@ alert('Sum = ' + sum) // "+" means combine into a string
 
 Some Python code 🐍
 
-```python:apam,js
+```python:apam,js {1,3,4}
 def fib():
     a, b = 0, 1
     while True:            # First iteration:
